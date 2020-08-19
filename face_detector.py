@@ -74,10 +74,10 @@ def test():
 		face_img= detect_face(img)
 		cv2.imwrite('static\\images\\new.jpg', face_img)
 
-		return render_template("face_detection.html", img='new.jpg', video=0)
+		return render_template("face_detection.html", img=1, video=0)
 
 
-	return render_template("face_detection.html", img=0, video=0)
+# 	return render_template("face_detection.html", img=0, video=0)
 
 
 
