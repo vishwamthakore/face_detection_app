@@ -8,6 +8,6 @@ matplotlib==2.2.2
 pickleshare==0.7.5
 scikit-learn==0.22.2.post1
 scipy==1.4.1
-seaborn==0.10.0
 WTForms==2.2.1
 opencv-python==4.3.0.36
+lxml==4.5.0
