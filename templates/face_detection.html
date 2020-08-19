@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Face Detection App</title>
+  </head>
+  <body>
+      <div class="container" >
+        <h1 class="text-center m-5">Face Detection App</h1>
+
+        <div class="container text-center" id='image-form'>
+        <form action="/Test" method="POST" enctype="multipart/form-data">
+          
+          <label>Please upload an image with front view of face </label> 
+          <input type="file" name='pic' accept="image/*">
+        
+          <button type="submit" > Submit Image</button>
+          </form>
+        </div>
+        <h5 class="text-center">OR</h5>
+
+        <hr>
+        
+
+        <div class="container text-center" id='video-form'>
+        <form action="/Video" method="POST" enctype="multipart/form-data">
+          
+          <label>Please upload a short video with front view of face</label> 
+          <!-- <input type="number" name="first" value="0"> -->
+          <input type="file" name='vid' accept="video/*">
+        
+          <button type="submit"> Submit Video</button>
+          </form>
+        </div>
+
+
+        {% if img!=0 %}
+
+        <div class="text-center">
+        <img  height="300" src="../static/images/new.jpg" >
+        </div>
+        {% endif %}
+
+
+        {% if video!=0 %}
+        <div class="text-center">
+
+        <video  height="300" controls>
+          <source src="../static/images/w.webm" type="video/mp4">
+        </video>
+        
+        </div>
+        {% endif %}
+
+
+        <div class= 'p-3 m-5 bg-light text-dark' >
+        <h3 class='text-center pb-3'> Description </h3>
+         <p> This app uses pretrained cascade classifiers for facial detection.
+            Please visit the below links for cascade classifiers.<br>
+
+          <a href='https://en.wikipedia.org/wiki/Haar-like_feature'>
+                    https://en.wikipedia.org/wiki/Haar-like_feature
+                    </a>
+
+
+          <br>
+                    <a href='https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html'>
+                    https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html
+                    </a>
+          <br>
+                    <a href='https://github.com/opencv/opencv/tree/master/data/haarcascades'>
+                    https://github.com/opencv/opencv/tree/master/data/haarcascades
+                    </a>
+
+        </p>
+
+          </div>
+
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

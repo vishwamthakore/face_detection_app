@@ -1,0 +1,14 @@
+Flask==1.0.2
+gunicorn==20.0.4
+Jinja2==2.10
+Werkzeug==0.14.1
+MarkupSafe==1.0
+numpy==1.15.0
+pandas==0.24.2
+matplotlib==2.2.2
+pickleshare==0.7.5
+scikit-learn==0.22.2.post1
+scipy==1.4.1
+seaborn==0.10.0
+WTForms==2.2.1
+opencv-python==4.3.0.36
